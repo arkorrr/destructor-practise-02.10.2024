@@ -48,6 +48,7 @@ class Film : IDisposable
 
     ~Film()
     {
+        Dispose(false);
         Console.WriteLine($"Film '{Title}' has been removed from memory.");
     }
 }
