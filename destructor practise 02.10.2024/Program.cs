@@ -21,5 +21,10 @@ class Program
         {
             Console.WriteLine($"Spectacle: {spectacle.title}");
         }
+        Spectacle s = new Spectacle("Title", "NameOfTheatre", "Genre", 60, 10);
+        s.ShowInfo();
+        s = null;
+        GC.Collect(); //Вызываются автоматически
+        GC.WaitForPendingFinalizers();
     }
 }
